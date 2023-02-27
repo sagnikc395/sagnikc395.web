@@ -46,6 +46,16 @@ const Layout = ({ children, home }) => {
           <Link href="/">Back to Home</Link>
         </div>
       )}
+      <div className="flex flex-col items-center">
+        <ul className="">
+          <li className="font-semibold">
+            <a href="https://github.com/sagnikc395/">Github</a>
+          </li>
+          <li className="font-semibold">
+            <a href="https://twitter.com/sagnikchat3/">Twitter</a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
