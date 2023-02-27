@@ -28,8 +28,10 @@ export default function Home({ allPostsData }) {
       <h2 className="p-4 text-2xl underline"> Blog Posts</h2>
       <ul className="p-2 justify-center space-y-3">
         {allPostsData.map(({ id, date, title }) => (
-          <li key={id} className="border-spacing-4 border-2 rounded-lg border-gray-900">
-            {title} <br /> {id} <br /> {date}
+          <li key={id} className="p-2 border-2 rounded-lg border-gray-900">
+            Title: {title} <br /> 
+            Topics: {id} <br /> 
+            Published Date: {date}
           </li>
         ))}
       </ul>
