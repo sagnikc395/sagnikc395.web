@@ -1,7 +1,5 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,7 +12,13 @@ export default function Home() {
       </Head>
       <main>
         <div className="p-4">
-          <h2>Lol</h2>
+          <h2 className="text-3xl underline">sagnikc395.blog</h2>
+        </div>
+        <div className="px-6 pt-1.5">
+          <h2 className="text-2xl">Posts</h2>
+          <ul>
+            <li><Link href="/posts/first-post/">Hello World</Link></li>
+          </ul>
         </div>
       </main>
     </>
