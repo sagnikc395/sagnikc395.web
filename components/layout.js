@@ -7,7 +7,7 @@ export const sitetitle = "sagnik's blog";
 
 const Layout = ({ children, home }) => {
   return (
-    <div className='p-4 pt-3 flex flex-col min-h-screen items-center bg-orange-200 '>
+    <div className='p-4 pt-3 flex flex-col min-h-screen items-center bg-zinc-800 text-zinc-100'>
       <Head>
         <link rel='icon' href='/favicon.ico' />
         <meta name='description' content='blog' />
