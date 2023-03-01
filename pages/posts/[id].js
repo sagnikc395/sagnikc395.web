@@ -29,14 +29,16 @@ const Post = ({ postData }) => {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h2 className='text-lg p-4 font-bold text-left'>{postData.title}</h2>
+        <h2 className='text-lg p-4 font-bold text-left text-indigo-600'>
+          {postData.title}
+        </h2>
         {/* using date-fns */}
         <div className='pt-2 pl-4 font-semibold'>
           <Date dateString={postData.date} />
         </div>
         {/* added content using dangerously set inner html*/}
         <div
-          className='p-4 text-left'
+          className='p-4 text-left font-mono'
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>

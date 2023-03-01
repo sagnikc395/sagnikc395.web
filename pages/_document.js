@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head />
-      <body className='border-8  bg-gradient-to-r from-indigo-300 to-purple-400'>
+      <body className='border-8  border-red-400  scrollbar-hide'>
         <Main />
         <NextScript />
       </body>
