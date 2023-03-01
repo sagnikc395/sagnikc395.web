@@ -3,7 +3,6 @@
 import Layout from "@/components/layout";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import Head from "next/head";
-import { sitetitle } from "@/components/layout";
 import Date from "../../components/date";
 
 export const getStaticPaths = async () => {
@@ -33,7 +32,7 @@ const Post = ({ postData }) => {
           {postData.title}
         </h2>
         {/* using date-fns */}
-        <div className='pt-2 pl-4 font-semibold'>
+        <div className='p-2 pl-4 font-semibold text-orange-300'>
           <Date dateString={postData.date} />
         </div>
         {/* added content using dangerously set inner html*/}
