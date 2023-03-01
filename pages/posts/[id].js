@@ -2,6 +2,9 @@
 
 import Layout from "@/components/layout";
 import { getAllPostIds, getPostData } from "@/lib/posts";
+import Head from "next/head";
+import { sitetitle } from "@/components/layout";
+import Date from "../../components/date";
 
 export const getStaticPaths = async () => {
   const paths = getAllPostIds();
@@ -22,13 +25,21 @@ export const getStaticProps = async ({ params }) => {
 const Post = ({ postData }) => {
   return (
     <Layout>
-      {postData.title}
-      <br />
-      {postData.id}
-      <br />
-      {postData.date}
-      {/* added content using dangerously set inner html*/}
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
+      <article>
+        <h2 className='text-lg p-4'>{postData.title}</h2>
+        {/* using date-fns */}
+        <div className='pt-2 pl-4'>
+          <Date dateString={postData.date} />
+        </div>
+        {/* added content using dangerously set inner html*/}
+        <div
+          className='p-4 text-align-left'
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
+      </article>
     </Layout>
   );
 };
