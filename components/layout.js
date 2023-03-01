@@ -7,34 +7,34 @@ export const sitetitle = "sagnik's blog";
 
 const Layout = ({ children, home }) => {
   return (
-    <div className="pt-3 flex flex-col items-center">
+    <div className='pt-3 flex flex-col items-center bg-orange-200'>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="blog" />
+        <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content='blog' />
       </Head>
-      <header className="header">
+      <header className='header'>
         {home ? (
           <>
             <Image
               priority
-              src="/images/profile.jpg"
-              className="border-2 rounded-lg border-b-gray-900"
+              src='/images/profile.jpg'
+              className='border-2 rounded-lg border-b-gray-900'
               height={144}
               width={144}
-              alt=""
+              alt="sagnik's photo"
             />
-            <h1 className="">{name}</h1>
+            <h1 className=''>{name}</h1>
           </>
         ) : (
           <>
-            <Link href="/">
+            <Link href='/'>
               <Image
                 priority
-                src="/images/profile.jpg"
-                className="border-2 rounded-3xl border-gray-900"
+                src='/images/profile.jpg'
+                className='border-2 rounded-3xl border-gray-900'
                 height={100}
                 width={108}
-                alt=""
+                alt=''
               />
             </Link>
           </>
@@ -42,17 +42,17 @@ const Layout = ({ children, home }) => {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className="">
-          <Link href="/">Back to Home</Link>
+        <div className=''>
+          <Link href='/'>Back to Home</Link>
         </div>
       )}
-      <div className="flex flex-col items-center">
-        <ul className="">
-          <li className="font-semibold">
-            <a href="https://github.com/sagnikc395/">Github</a>
+      <div className='flex flex-col items-center'>
+        <ul className=''>
+          <li className='font-semibold'>
+            <a href='https://github.com/sagnikc395/'>Github</a>
           </li>
-          <li className="font-semibold">
-            <a href="https://twitter.com/sagnikchat3/">Twitter</a>
+          <li className='font-semibold'>
+            <a href='https://twitter.com/sagnikchat3/'>Twitter</a>
           </li>
         </ul>
       </div>
