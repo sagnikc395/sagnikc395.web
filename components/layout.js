@@ -7,28 +7,26 @@ export const sitetitle = "sagnik's blog";
 
 const Layout = ({ children, home }) => {
   return (
-    <div className='p-4 pt-3 flex flex-col items-center bg-orange-200'>
+    <div className='p-4 pt-3 flex flex-col min-h-screen items-center bg-orange-200 '>
       <Head>
         <link rel='icon' href='/favicon.ico' />
         <meta name='description' content='blog' />
       </Head>
       <main>{children}</main>
-      {!home && (
-        <div className=''>
-          <Link href='/'>Back to Home</Link>
-        </div>
-      )}
-      <footer>
-        <div className='flex flex-col items-center'>
-          <ul className='flex flex-row gap-x-4'>
-            <li className='font-semibold'>
-              <a href='https://github.com/sagnikc395/'>Github</a>
-            </li>
-            <li className='font-semibold'>
-              <a href='https://twitter.com/sagnikchat3/'>Twitter</a>
-            </li>
-          </ul>
-        </div>
+      <footer className='mt-auto'>
+        {!home && (
+          <div className='items-center'>
+            <Link href='/'>Back to Home</Link>
+          </div>
+        )}
+        <ul className='flex flex-row justify-center gap-x-4'>
+          <li className='font-semibold'>
+            <a href='https://github.com/sagnikc395/'>Github</a>
+          </li>
+          <li className='font-semibold'>
+            <a href='https://github.com/sagnikchat3/'>Twitter</a>
+          </li>
+        </ul>
       </footer>
     </div>
   );
