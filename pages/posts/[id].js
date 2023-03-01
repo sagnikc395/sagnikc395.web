@@ -11,7 +11,7 @@ export const getStaticPaths = async () => {
   };
 };
 export const getStaticProps = async ({ params }) => {
-  const postData = getPostData(params.id);
+  const postData = await getPostData(params.id);
   return {
     props: {
       postData,
@@ -27,6 +27,8 @@ const Post = ({ postData }) => {
       {postData.id}
       <br />
       {postData.date}
+      {/* added content using dangerously set inner html*/}
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   );
 };
