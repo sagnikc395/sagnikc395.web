@@ -37,8 +37,7 @@ export default function Home({ allPostsData }) {
           <span className='underline'>
             <a href='https://github.com/sagnikc395/'>Sagnik</a>
           </span>
-          . I&apos;m a software developer and like to create beautiful digital
-          products.
+          .A software developer who likes to create beautiful digital products.
         </p>
       </section>
       <h2 className='p-4 text-2xl underline'> Blog Posts</h2>
