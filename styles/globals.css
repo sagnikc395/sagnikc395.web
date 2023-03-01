@@ -4,4 +4,8 @@
 
 body {
     @apply  bg-orange-200 text-neutral-900 antialiased font-sans;
+    min-height: 100vh;
+}
+footer {
+    margin-top: ???px;
 }
