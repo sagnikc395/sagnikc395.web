@@ -45,7 +45,7 @@ export default function Home({ allPostsData }) {
                 {title}
               </Link>
               <br />
-              <small className="">
+              <small className="text-start">
                 <Date dateString={date} />
               </small>
             </li>
