@@ -15,7 +15,7 @@ const Layout = ({ children, home }) => {
       <main>{children}</main>
       <footer className='mt-auto'>
         {!home && (
-          <div className='items-center text-indigo-600 font-bold text-2xl'>
+          <div className='justify-center text-indigo-600 font-bold text-2xl'>
             <Link href='/'>Back to Home</Link>
           </div>
         )}
@@ -26,6 +26,10 @@ const Layout = ({ children, home }) => {
           <li className='font-semibold text-pink-400 text-xl'>
             <a href='https://github.com/sagnikchat3/'>Twitter</a>
           </li>
+          <li className='font-semibold text-pink-400 text-xl'>
+            <a href='#'>LinkedIn</a>
+          </li>
+
         </ul>
       </footer>
     </div>
