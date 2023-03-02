@@ -8,12 +8,12 @@ const inter = Inter({
 export default function App({ Component, pageProps }) {
   return (
     <>
-       <style jsx global>{`
+      <style jsx global>{`
         html {
           font-family: ${inter.style.fontFamily};
         }
       `}</style>
-        <Component {...pageProps} />
+      <Component {...pageProps} />
     </>
   );
 }
