@@ -21,30 +21,31 @@ export default function Home({ allPostsData }) {
         <Head>
           <title>{sitetitle}</title>
         </Head>
-        <section className='items-center flex flex-col p-4'>
-          <p className='text-3xl font-bold text-indigo-600'>
+        <section className="items-center flex flex-col p-4">
+          <p className="text-3xl font-bold text-indigo-600">
             Sagnik&apos;s Blog{" "}
           </p>
-          <p className='text-xl  p-4'>
-            I am a software developer who likes to create{" "}
-            <span className='bg-violet-500 pl-0.5 pr-0 text-gray-900'>
-              beautiful{" "}
-            </span>
-            digital products.
-          </p>
+
+          <div className="text-xl sm:text-xl  lg:text-3xl p-2 justify-center">
+            Hi, 👋 ! I&apos;m a software developer and tinkerer;
+              <div className="text-2xl flex flex-row justify-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-red-600  dark:from-rose-400 dark:via-fuchsia-500 dark:to-indigo-500 font-semibold ">
+               making beautiful , impactful and useful{" "}
+              </div>
+              things on the internet.
+          </div>
         </section>
-        <h2 className='p-4 text-2xl font-bold  text-indigo-600'>
+        <h2 className="p-4 text-2xl font-bold  text-indigo-600">
           {" "}
           Blog Posts:
         </h2>
-        <ul className='p-2 justify-center space-y-3'>
+        <ul className="p-2 justify-center space-y-3">
           {allPostsData.map(({ id, date, title }) => (
-            <li key={id} className='p-2 border-2 rounded-lg border-violet-500'>
-              <Link href={`/posts/${id}`} className=''>
+            <li key={id} className="p-2 hover:border-2 rounded-lg hover:border-violet-500">
+              <Link href={`/posts/${id}`} className="">
                 {title}
               </Link>
               <br />
-              <small className=''>
+              <small className="">
                 <Date dateString={date} />
               </small>
             </li>

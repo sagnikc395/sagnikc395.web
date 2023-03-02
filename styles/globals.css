@@ -2,11 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
     @apply  bg-orange-200 text-neutral-900 antialiased font-sans;
     min-height: 100vh;
     position: relative;
-    font-family: 'Roboto', sans-serif;
 }
