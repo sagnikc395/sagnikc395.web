@@ -1,4 +1,3 @@
-# sagnikc395.blog
+# sagnikc395.web
 
-My blog made using Next.js and TailwindCSS.
-
+My website + blog made using Next.js , TailwindCSS , Remark.
